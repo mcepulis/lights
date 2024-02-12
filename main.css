@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(253, 253, 253);
+    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,13 +7,14 @@ body {
 }
 
 .box {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    width: 300px;
-    height: 700px;
+    /* width: 300px;
+    height: 700px; */
     background-color: rgb(0, 0, 0);
 }
 
@@ -28,49 +29,90 @@ body {
 @keyframes blinkYellow {
     from {
         background-color:yellow;
+        top: 10px;
+        left: 120px;
     }
+    50% {
+        top: 13px;
+        left: 130px;
+        }
+    
     to {
-        background-color: black;
+        background-color: rgb(174, 31, 117);
+        top: 10px;
+        left: 120px;
     }
 }
 
 @keyframes blinkGreen {
     from {
         background-color:green;
+        top: 155px;
+        left: 30px;
     }
+    50% {
+        top: 153px;
+        left: 33px;
+        }
     to {
-        background-color: black;
+        background-color: rgb(150, 69, 69);
+        top: 155px;
+        left: 30px;
     }
 }
 @keyframes blinkRed {
     from {
         background-color:red;
+        top: 155px;
+        left: 20px;
     }
+    50% {
+        top: 153px;
+        left: 22px;
+        }
     to {
-        background-color: black;
+        background-color: rgb(228, 217, 54);
+        top: 155px;
+        left: 20px;
     }
 }
 @keyframes blinkBlue {
     from {
         background-color:blue;
+        top: 350px;
+        left: 90px;
     }
+    50% {
+        top: 355px;
+        left: 92x;
+        }
     to {
-        background-color: black;
+        background-color: rgb(168, 23, 197);
+        top: 350px;
+        left: 90px;
     }
 }
 @keyframes blinkPink {
     from {
         background-color:pink;
+        top: 350px;
+        left: -20px;
     }
+    50% {
+        top: 355px;
+        left: -22px;
+        }
     to {
-        background-color: black;
+        background-color: rgb(33, 149, 226);
+        top: 350px;
+        left: -20px;
     }
 }
 
 
 
 .yellow {
-    background-color: yellow;
+    position: absolute;
     margin-left: -100px;
     animation-name: blinkYellow;
     animation-duration: 3s;
@@ -79,7 +121,7 @@ body {
 }
 
 .green {
-    background-color: rgb(0, 255, 0);
+    position: absolute;
     margin-left: 100px;
     animation-name: blinkGreen;
     animation-duration: 2s;
@@ -88,7 +130,7 @@ body {
 }
 
 .red {
-    background-color:red;
+    position: absolute;
     margin-left: -100px;
     animation-name: blinkRed;
     animation-duration: 3s;
@@ -97,7 +139,7 @@ body {
 }
 
 .blue {
-    background-color: blue;
+    position: absolute;
     margin-left: 100px;
     animation-name: blinkBlue;
     animation-duration: 4s;
@@ -106,10 +148,10 @@ body {
 }
 
 .pink {
-    background-color: pink;
+    position: absolute;
     margin-left: -100px;
     animation-name: blinkPink;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
   
 }
